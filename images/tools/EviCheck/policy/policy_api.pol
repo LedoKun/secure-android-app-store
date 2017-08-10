@@ -1,0 +1,311 @@
+EVICHECK_SERVICE_METHOD :  ~Landroid/telephony/TelephonyManager->getLine1Number()Ljava/lang/String
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/Socket-><init>()V
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/telephony/TelephonyManager->getSimSerialNumber()Ljava/lang/String
+EVICHECK_RECEIVER_METHOD :  ~Landroid/provider/Settings$Secure->putString(Landroid/content/ContentResolver; Ljava/lang/String; Ljava/lang/String;)Z
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/media/AudioManager->stopBluetoothSco()V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/net/wifi/WifiManager->reconnect()Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_PAUSE_METHOD :  ~Ljava/net/Socket-><init>()V
+EVICHECK_DESTROY_METHOD :  ~Landroid/provider/ContactsContract$Contacts->openContactPhotoInputStream(Landroid/content/ContentResolver; Landroid/net/Uri;)Ljava/io/InputStream
+EVICHECK_RECEIVER_METHOD :  ~Landroid/media/AudioManager->startBluetoothSco()V
+EVICHECK_RESTART_METHOD :  ~Landroid/os/PowerManager$WakeLock->release()V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/pim/vcard/VCardComposer->createOneEntry()Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/bluetooth/BluetoothAdapter->getAddress()Ljava/lang/String
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/gsm/SmsManager->getDefault()Landroid/telephony/gsm/SmsManager
+EVICHECK_ONTOUCH_HANDLER :  ~Lorg/apache/http/impl/client/DefaultHttpClient-><init>(Lorg/apache/http/conn/ClientConnectionManager; Lorg/apache/http/params/HttpParams;)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/accounts/AccountManager->confirmCredentials(Landroid/accounts/Account; Landroid/os/Bundle; Landroid/app/Activity; Landroid/accounts/AccountManagerCallback; Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/app/WallpaperManager->setResource(I)V
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_RESTART_METHOD :  ~Landroid/os/PowerManager$WakeLock->acquire()V
+EVICHECK_RECEIVER_METHOD :  ~Ljava/net/HttpURLConnection->connect()V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/nfc/NfcManager->getDefaultAdapter()Landroid/nfc/NfcAdapter
+EVICHECK_START_METHOD :  ~Landroid/os/Vibrator->cancel()V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/content/Context->setWallpaper(Ljava/io/InputStream;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/content/ContentResolver->isSyncActive(Landroid/accounts/Account; Ljava/lang/String;)Z
+EVICHECK_SERVICE_METHOD :  ~Landroid/content/ContentResolver->isSyncPending(Landroid/accounts/Account; Ljava/lang/String;)Z
+EVICHECK_START_METHOD :  ~Landroid/app/KeyguardManager$KeyguardLock->disableKeyguard()V
+EVICHECK_SERVICE_METHOD :  ~Landroid/net/ConnectivityManager->setNetworkPreference(I)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_START_METHOD :  ~Ljava/net/Socket-><init>()V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/TelephonyManager->getCellLocation()Landroid/telephony/CellLocation
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/TelephonyManager->getNeighboringCellInfo()Ljava/util/List
+EVICHECK_SERVICE_METHOD :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/accounts/AccountManager->getAuthToken(Landroid/accounts/Account; Ljava/lang/String; Landroid/os/Bundle; Landroid/app/Activity; Landroid/accounts/AccountManagerCallback; Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture
+EVICHECK_DESTROY_METHOD :  ~Landroid/app/KeyguardManager$KeyguardLock->disableKeyguard()V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/webkit/WebView-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/telephony/TelephonyManager->getVoiceMailNumber()Ljava/lang/String
+EVICHECK_SERVICE_METHOD :  ~Landroid/nfc/NfcManager->getDefaultAdapter()Landroid/nfc/NfcAdapter
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getState()I
+EVICHECK_RESUME_METHOD :  ~Landroid/telephony/gsm/SmsManager->getDefault()Landroid/telephony/gsm/SmsManager
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_RESUME_METHOD :  ~Landroid/nfc/NfcManager->getDefaultAdapter()Landroid/nfc/NfcAdapter
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/media/AudioRecord-><init>(I I I I I)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/os/Vibrator->vibrate(J)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/media/AudioManager->getVibrateSetting(I)I
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/Browser->deleteFromHistory(Landroid/content/ContentResolver; Ljava/lang/String;)V
+EVICHECK_RESUME_METHOD :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/media/AudioManager->setParameters(Ljava/lang/String;)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/pim/vcard/VCardComposer->createOneEntry()Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/accounts/AccountManager->invalidateAuthToken(Ljava/lang/String; Ljava/lang/String;)V
+EVICHECK_RESUME_METHOD :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/TelephonyManager->getSimSerialNumber()Ljava/lang/String
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager$WifiLock->acquire()V
+EVICHECK_ONCREATE_METHOD :  ~Ljava/net/DatagramSocket-><init>()V
+EVICHECK_PAUSE_METHOD :  ~Landroid/telephony/TelephonyManager->getLine1Number()Ljava/lang/String
+EVICHECK_RESUME_METHOD :  ~Landroid/content/ContentResolver->setIsSyncable(Landroid/accounts/Account; Ljava/lang/String; I)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/gsm/SmsManager->getDefault()Landroid/telephony/gsm/SmsManager
+EVICHECK_SERVICE_METHOD :  ~Ljava/lang/Runtime->exec(Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/telephony/TelephonyManager->getLine1Number()Ljava/lang/String
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/ContactsContract$Contacts->lookupContact(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/content/Context->removeStickyBroadcast(Landroid/content/Intent;)V
+EVICHECK_SERVICE_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->setScanMode(I I)Z
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/pim/vcard/VCardComposer->init()Z
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/content/Context->setWallpaper(Ljava/io/InputStream;)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/provider/ContactsContract$RawContacts->getContactLookupUri(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/URL->openStream()Ljava/io/InputStream
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/media/AudioManager->isBluetoothA2dpOn()Z
+EVICHECK_START_METHOD :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_DO_INBACKGROUND :  ~Landroid/provider/Browser->getAllBookmarks(Landroid/content/ContentResolver;)Landroid/database/Cursor
+EVICHECK_PAUSE_METHOD :  ~Landroid/provider/ContactsContract$Contacts->openContactPhotoInputStream(Landroid/content/ContentResolver; Landroid/net/Uri;)Ljava/io/InputStream
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/provider/Browser->clearSearches(Landroid/content/ContentResolver;)V
+EVICHECK_RESUME_METHOD :  ~Landroid/net/wifi/WifiManager->getDhcpInfo()Landroid/net/DhcpInfo
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getName()Ljava/lang/String
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/net/ConnectivityManager->startUsingNetworkFeature(I Ljava/lang/String;)I
+EVICHECK_DO_INBACKGROUND :  ~Landroid/provider/Settings$System->putString(Landroid/content/ContentResolver; Ljava/lang/String; Ljava/lang/String;)Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/ConnectivityManager->requestRouteToHost(I I)Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/media/AudioManager->isBluetoothA2dpOn()Z
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/hardware/Camera->open()Landroid/hardware/Camera
+EVICHECK_DESTROY_METHOD :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/lang/Runtime->exec(Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_DO_INBACKGROUND :  ~Landroid/nfc/NfcAdapter->isEnabled()Z
+EVICHECK_PAUSE_METHOD :  ~Landroid/os/Vibrator->vibrate(J)V
+EVICHECK_SERVICE_METHOD :  ~Ljava/net/DatagramSocket-><init>()V
+EVICHECK_ONCLICK_HANDLER :  ~Ljava/net/URL->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection
+EVICHECK_DO_INBACKGROUND :  ~Landroid/provider/ContactsContract$Contacts->lookupContact(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_PAUSE_METHOD :  ~Landroid/location/LocationManager->getProvider(Ljava/lang/String;)Landroid/location/LocationProvider
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/app/Application->setWallpaper(Landroid/graphics/Bitmap;)V
+EVICHECK_SERVICE_METHOD :  ~Landroid/nfc/NfcAdapter->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/content/Context->removeStickyBroadcast(Landroid/content/Intent;)V
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/provider/ContactsContract$RawContacts->getContactLookupUri(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_SERVICE_METHOD :  ~Landroid/provider/Browser->getAllBookmarks(Landroid/content/ContentResolver;)Landroid/database/Cursor
+EVICHECK_ONCREATE_METHOD :  ~Landroid/telephony/gsm/SmsManager->getDefault()Landroid/telephony/gsm/SmsManager
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/DatagramSocket-><init>(I Ljava/net/InetAddress;)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/bluetooth/BluetoothAdapter->getAddress()Ljava/lang/String
+EVICHECK_ONCREATE_METHOD :  ~Landroid/provider/Browser->getAllBookmarks(Landroid/content/ContentResolver;)Landroid/database/Cursor
+EVICHECK_RECEIVER_METHOD :  ~Landroid/media/AudioManager->stopBluetoothSco()V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/media/AsyncPlayer->stop()V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/provider/Browser->clearHistory(Landroid/content/ContentResolver;)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/net/ConnectivityManager->getAllNetworkInfo()[Landroid/net/NetworkInfo
+EVICHECK_DO_INBACKGROUND :  ~Landroid/app/KeyguardManager$KeyguardLock->disableKeyguard()V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/provider/ContactsContract$Contacts->lookupContact(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_RESUME_METHOD :  ~Ljava/net/URLConnection->getInputStream()Ljava/io/InputStream
+EVICHECK_DO_INBACKGROUND :  ~Landroid/bluetooth/BluetoothAdapter->disable()Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/location/LocationManager->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location
+EVICHECK_ONCREATE_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getName()Ljava/lang/String
+EVICHECK_ONCREATE_METHOD :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_RESUME_METHOD :  ~Landroid/accounts/AccountManager->addAccountExplicitly(Landroid/accounts/Account; Ljava/lang/String; Landroid/os/Bundle;)Z
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/telephony/SmsManager->getDefault()Landroid/telephony/SmsManager
+EVICHECK_START_METHOD :  ~Landroid/provider/Settings$System->putString(Landroid/content/ContentResolver; Ljava/lang/String; Ljava/lang/String;)Z
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/TelephonyManager->getLine1Number()Ljava/lang/String
+EVICHECK_ONCREATE_METHOD :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/app/PendingIntent;)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/media/AudioManager->getVibrateSetting(I)I
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/nfc/NfcManager->getDefaultAdapter()Landroid/nfc/NfcAdapter
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/provider/Settings$System->putString(Landroid/content/ContentResolver; Ljava/lang/String; Ljava/lang/String;)Z
+EVICHECK_SERVICE_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->setDiscoverableTimeout(I)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/location/LocationManager->addNmeaListener(Landroid/location/GpsStatus$NmeaListener;)Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/nfc/NfcManager->getDefaultAdapter()Landroid/nfc/NfcAdapter
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/TelephonyManager->getVoiceMailNumber()Ljava/lang/String
+EVICHECK_DO_INBACKGROUND :  ~Landroid/telephony/gsm/SmsManager->getDefault()Landroid/telephony/gsm/SmsManager
+EVICHECK_DESTROY_METHOD :  ~Landroid/provider/ContactsContract$Contacts->lookupContact(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_START_METHOD :  ~Landroid/app/KeyguardManager$KeyguardLock->reenableKeyguard()V
+EVICHECK_DESTROY_METHOD :  ~Landroid/accounts/AccountManager->getAccounts()[Landroid/accounts/Account
+EVICHECK_RECEIVER_METHOD :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse
+EVICHECK_RESUME_METHOD :  ~Landroid/telephony/SmsManager->getDefault()Landroid/telephony/SmsManager
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/telephony/TelephonyManager->getCellLocation()Landroid/telephony/CellLocation
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_ONCREATE_METHOD :  ~Landroid/media/MediaRecorder->setVideoSource(I)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/os/Vibrator->cancel()V
+EVICHECK_RESUME_METHOD :  ~Landroid/location/LocationManager->sendExtraCommand(Ljava/lang/String; Ljava/lang/String; Landroid/os/Bundle;)Z
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/location/LocationManager->addNmeaListener(Landroid/location/GpsStatus$NmeaListener;)Z
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_ONCREATE_METHOD :  ~Landroid/app/ActivityManager->restartPackage(Ljava/lang/String;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/app/KeyguardManager$KeyguardLock->disableKeyguard()V
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/URLConnection->getInputStream()Ljava/io/InputStream
+EVICHECK_DESTROY_METHOD :  ~Landroid/media/AudioManager->shouldVibrate(I)Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/app/ActivityManager->restartPackage(Ljava/lang/String;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/media/AudioManager->getVibrateSetting(I)I
+EVICHECK_RECEIVER_METHOD :  ~Ljava/net/DatagramSocket-><init>()V
+EVICHECK_SERVICE_METHOD :  ~Landroid/app/WallpaperManager->setBitmap(Landroid/graphics/Bitmap;)V
+EVICHECK_RESUME_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_DO_INBACKGROUND :  ~Ljava/net/ServerSocket-><init>(I I Ljava/net/InetAddress;)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/app/Application->setWallpaper(Landroid/graphics/Bitmap;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/media/AudioManager->setVibrateSetting(I I)V
+EVICHECK_SERVICE_METHOD :  ~Landroid/app/KeyguardManager->exitKeyguardSecurely(Landroid/app/KeyguardManager$OnKeyguardExitResult;)V
+EVICHECK_PAUSE_METHOD :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_RECEIVER_METHOD :  ~Landroid/os/Vibrator->cancel()V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/net/wifi/WifiManager->disableNetwork(I)Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/app/Instrumentation->sendPointerSync(Landroid/view/MotionEvent;)V
+EVICHECK_RESUME_METHOD :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/app/PendingIntent;)V
+EVICHECK_START_METHOD :  ~Landroid/media/AudioRecord-><init>(I I I I I)V
+EVICHECK_ONCREATE_METHOD :  ~Lcom/android/internal/telephony/CallerInfo->getCallerId(Landroid/content/Context; Ljava/lang/String;)Ljava/lang/String
+EVICHECK_RECEIVER_METHOD :  ~Landroid/app/AlarmManager->setTimeZone(Ljava/lang/String;)V
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_SERVICE_METHOD :  ~Landroid/nfc/NfcAdapter->isEnabled()Z
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->cancelDiscovery()Z
+EVICHECK_SERVICE_METHOD :  ~Ljava/net/DatagramSocket-><init>(I Ljava/net/InetAddress;)V
+EVICHECK_PAUSE_METHOD :  ~Landroid/media/AudioManager->stopBluetoothSco()V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/media/AudioManager->setVibrateSetting(I I)V
+EVICHECK_ONCLICK_HANDLER :  ~Ljava/net/DatagramSocket-><init>()V
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/Browser->getAllVisitedUrls(Landroid/content/ContentResolver;)Landroid/database/Cursor
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/media/AudioManager->setMode(I)V
+EVICHECK_RESTART_METHOD :  ~Landroid/app/NotificationManager->notify(I Landroid/app/Notification;)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/content/Context->setWallpaper(Ljava/io/InputStream;)V
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/location/LocationManager->addNmeaListener(Landroid/location/GpsStatus$NmeaListener;)Z
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/telephony/SmsManager->sendDataMessage(Ljava/lang/String; Ljava/lang/String; S [B Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/content/Context->removeStickyBroadcast(Landroid/content/Intent;)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/pim/vcard/VCardComposer->init()Z
+EVICHECK_START_METHOD :  ~Landroid/accounts/AccountManager->setUserData(Landroid/accounts/Account; Ljava/lang/String; Ljava/lang/String;)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/accounts/AccountManager->setPassword(Landroid/accounts/Account; Ljava/lang/String;)V
+EVICHECK_DO_INBACKGROUND :  ~Ljava/lang/Runtime->exec(Ljava/lang/String; [Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_START_METHOD :  ~Landroid/accounts/AccountManager->addAccountExplicitly(Landroid/accounts/Account; Ljava/lang/String; Landroid/os/Bundle;)Z
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/Contacts$People->loadContactPhoto(Landroid/content/Context; Landroid/net/Uri; I Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap
+EVICHECK_DO_INBACKGROUND :  ~Landroid/media/AudioManager->setRingerMode(I)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/provider/Settings$Secure->putInt(Landroid/content/ContentResolver; Ljava/lang/String; I)Z
+EVICHECK_RECEIVER_METHOD :  ~Landroid/net/ConnectivityManager->startUsingNetworkFeature(I Ljava/lang/String;)I
+EVICHECK_SERVICE_METHOD :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_SERVICE_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getAddress()Ljava/lang/String
+EVICHECK_RECEIVER_METHOD :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/telephony/TelephonyManager->getSimSerialNumber()Ljava/lang/String
+EVICHECK_DO_INBACKGROUND :  ~Landroid/os/PowerManager$WakeLock->acquire(J)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/provider/ContactsContract$Contacts->lookupContact(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_ONCREATE_METHOD :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V
+EVICHECK_RECEIVER_METHOD :  ~Lcom/android/internal/telephony/CallerInfo->getCallerId(Landroid/content/Context; Ljava/lang/String;)Ljava/lang/String
+EVICHECK_DESTROY_METHOD :  ~Ljava/lang/Runtime->exec(Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager->saveConfiguration()Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/accounts/AccountManager->peekAuthToken(Landroid/accounts/Account; Ljava/lang/String;)Ljava/lang/String
+EVICHECK_RESTART_METHOD :  ~Landroid/os/PowerManager->newWakeLock(I Ljava/lang/String;)Landroid/os/PowerManager$WakeLock
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/Contacts$People->createPersonInMyContactsGroup(Landroid/content/ContentResolver; Landroid/content/ContentValues;)Landroid/net/Uri
+EVICHECK_RESUME_METHOD :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_ONCREATE_METHOD :  ~Landroid/location/LocationManager->sendExtraCommand(Ljava/lang/String; Ljava/lang/String; Landroid/os/Bundle;)Z
+EVICHECK_RESUME_METHOD :  ~Ljava/lang/Runtime->exec([Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_DESTROY_METHOD :  ~Landroid/app/NotificationManager->notify(I Landroid/app/Notification;)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/ConnectivityManager->startUsingNetworkFeature(I Ljava/lang/String;)I
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->enable()Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/telephony/SmsManager->getDefault()Landroid/telephony/SmsManager
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/URL->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/telephony/gsm/SmsManager->getDefault()Landroid/telephony/gsm/SmsManager
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->disable()Z
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_RESTART_METHOD :  ~Landroid/telephony/TelephonyManager->getLine1Number()Ljava/lang/String
+EVICHECK_RESTART_METHOD :  ~Ljava/lang/Runtime->exec([Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/content/pm/PackageManager->setApplicationEnabledSetting(Ljava/lang/String; I I)V
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/app/KeyguardManager$KeyguardLock->reenableKeyguard()V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/bluetooth/BluetoothAdapter->enable()Z
+EVICHECK_PAUSE_METHOD :  ~Landroid/app/KeyguardManager$KeyguardLock->disableKeyguard()V
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/pim/vcard/VCardComposer->init()Z
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/gsm/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_SERVICE_METHOD :  ~Landroid/net/ConnectivityManager->startUsingNetworkFeature(I Ljava/lang/String;)I
+EVICHECK_RESTART_METHOD :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse
+EVICHECK_DO_INBACKGROUND :  ~Landroid/location/LocationManager->addGpsStatusListener(Landroid/location/GpsStatus$Listener;)Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager->getWifiApState()I
+EVICHECK_PAUSE_METHOD :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/speech/SpeechRecognizer->stopListening()V
+EVICHECK_DESTROY_METHOD :  ~Landroid/bluetooth/BluetoothA2dp->getConnectedDevices()Ljava/util/List
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/content/Context->sendStickyBroadcast(Landroid/content/Intent;)V
+EVICHECK_START_METHOD :  ~Ljava/net/HttpURLConnection->connect()V
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/media/AudioManager->startBluetoothSco()V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/provider/Settings$System->putInt(Landroid/content/ContentResolver; Ljava/lang/String; I)Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/content/ContentResolver->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream
+EVICHECK_ONCREATE_METHOD :  ~Landroid/nfc/NfcManager->getDefaultAdapter()Landroid/nfc/NfcAdapter
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/URL->openConnection()Ljava/net/URLConnection
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/HttpURLConnection->connect()V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/media/AudioManager->setMode(I)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/TelephonyManager->getDeviceSoftwareVersion()Ljava/lang/String
+EVICHECK_SERVICE_METHOD :  ~Landroid/net/ConnectivityManager->stopUsingNetworkFeature(I Ljava/lang/String;)I
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/SmsManager->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V
+EVICHECK_ONCLICK_HANDLER :  ~Lcom/android/internal/telephony/CallerInfo->getCallerId(Landroid/content/Context; Ljava/lang/String;)Ljava/lang/String
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/pim/vcard/VCardComposer->createOneEntry()Z
+EVICHECK_DO_INBACKGROUND :  ~Landroid/media/MediaPlayer->setWakeMode(Landroid/content/Context; I)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/telephony/TelephonyManager->getLine1Number()Ljava/lang/String
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/provider/ContactsContract$Contacts->openContactPhotoInputStream(Landroid/content/ContentResolver; Landroid/net/Uri;)Ljava/io/InputStream
+EVICHECK_SERVICE_METHOD :  ~Landroid/webkit/WebView-><init>(Landroid/content/Context;)V
+EVICHECK_ONTOUCH_HANDLER :  ~Ljava/net/URLConnection->connect()V
+EVICHECK_RESUME_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getState()I
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/bluetooth/BluetoothAdapter->getScanMode()I
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/TelephonyManager->getVoiceMailNumber()Ljava/lang/String
+EVICHECK_ONCREATE_METHOD :  ~Landroid/app/ActivityManager->killBackgroundProcesses(Ljava/lang/String;)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/bluetooth/BluetoothAdapter->isEnabled()Z
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/telephony/gsm/SmsManager->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V
+EVICHECK_DESTROY_METHOD :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/SmsManager->getDefault()Landroid/telephony/SmsManager
+EVICHECK_DO_INBACKGROUND :  ~Landroid/media/MediaRecorder->setAudioSource(I)V
+EVICHECK_PAUSE_METHOD :  ~Landroid/media/AsyncPlayer->stop()V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/provider/Settings$Secure->putInt(Landroid/content/ContentResolver; Ljava/lang/String; I)Z
+EVICHECK_RESUME_METHOD :  ~Landroid/media/AudioManager->setRingerMode(I)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager$WifiLock->release()V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/nfc/NfcAdapter->isEnabled()Z
+EVICHECK_PAUSE_METHOD :  ~Landroid/media/AudioManager->startBluetoothSco()V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/provider/ContactsContract$RawContacts->getContactLookupUri(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/media/AudioManager->isWiredHeadsetOn()Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/accounts/AccountManager->setPassword(Landroid/accounts/Account; Ljava/lang/String;)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager->removeNetwork(I)Z
+EVICHECK_RESUME_METHOD :  ~Landroid/telephony/SmsManager->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/pim/vcard/VCardComposer->init()Z
+EVICHECK_RECEIVER_METHOD :  ~Landroid/provider/Settings$System->putInt(Landroid/content/ContentResolver; Ljava/lang/String; I)Z
+EVICHECK_START_METHOD :  ~Landroid/accounts/AccountManager->removeAccount(Landroid/accounts/Account; Landroid/accounts/AccountManagerCallback; Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture
+EVICHECK_ACTIVITY_METHOD :  ~Lcom/android/internal/telephony/CallerInfo->getCallerId(Landroid/content/Context; Ljava/lang/String;)Ljava/lang/String
+EVICHECK_DESTROY_METHOD :  ~Landroid/media/AudioManager->isWiredHeadsetOn()Z
+EVICHECK_PAUSE_METHOD :  ~Landroid/location/LocationManager->requestLocationUpdates(Ljava/lang/String; J F Landroid/location/LocationListener; Landroid/os/Looper;)V
+EVICHECK_DESTROY_METHOD :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getAddress()Ljava/lang/String
+EVICHECK_RESUME_METHOD :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_RESUME_METHOD :  ~Landroid/telephony/SmsManager->sendDataMessage(Ljava/lang/String; Ljava/lang/String; S [B Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+EVICHECK_ONCREATE_METHOD :  ~Landroid/content/Context->sendStickyBroadcast(Landroid/content/Intent;)V
+EVICHECK_START_METHOD :  ~Landroid/bluetooth/BluetoothHeadset->getConnectedDevices()Ljava/util/List
+EVICHECK_ONCREATE_METHOD :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse
+EVICHECK_RESTART_METHOD :  ~Landroid/app/ActivityManager->getRunningTasks(I)Ljava/util/List
+EVICHECK_RESTART_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager->getDhcpInfo()Landroid/net/DhcpInfo
+EVICHECK_RECEIVER_METHOD :  ~Landroid/net/wifi/WifiManager->startScan()Z
+EVICHECK_SERVICE_METHOD :  ~Landroid/app/Application->sendStickyBroadcast(Landroid/content/Intent;)V
+EVICHECK_ONCLICK_HANDLER :  ~Landroid/accounts/AccountManager->invalidateAuthToken(Ljava/lang/String; Ljava/lang/String;)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->startDiscovery()Z
+EVICHECK_ONCLICK_HANDLER :  ~Ljava/net/URLConnection->getInputStream()Ljava/io/InputStream
+EVICHECK_ONTOUCH_HANDLER :  ~Landroid/provider/ContactsContract$Contacts->openContactPhotoInputStream(Landroid/content/ContentResolver; Landroid/net/Uri;)Ljava/io/InputStream
+EVICHECK_DO_INBACKGROUND :  ~Landroid/app/KeyguardManager->exitKeyguardSecurely(Landroid/app/KeyguardManager$OnKeyguardExitResult;)V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/app/ActivityManager->killBackgroundProcesses(Ljava/lang/String;)V
+EVICHECK_RECEIVER_METHOD :  ~Landroid/bluetooth/BluetoothAdapter->getBondedDevices()Ljava/util/Set
+EVICHECK_PAUSE_METHOD :  ~Landroid/media/AudioManager->setRingerMode(I)V
+EVICHECK_ONTOUCH_HANDLER :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse
+EVICHECK_START_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_START_METHOD :  ~Ljava/net/URL->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection
+EVICHECK_DO_INBACKGROUND :  ~Landroid/net/wifi/WifiManager->addNetwork(Landroid/net/wifi/WifiConfiguration;)I
+EVICHECK_DESTROY_METHOD :  ~Ljava/lang/Runtime->exec([Ljava/lang/String;)Ljava/lang/Process
+EVICHECK_RESUME_METHOD :  ~Ljava/net/Socket-><init>()V
+EVICHECK_RESUME_METHOD :  ~Landroid/media/MediaPlayer->setWakeMode(Landroid/content/Context; I)V
+EVICHECK_RECEIVER_METHOD :  ~Ljava/net/URLConnection->connect()V
+EVICHECK_DO_INBACKGROUND :  ~Landroid/media/AudioManager->setVibrateSetting(I I)V
+EVICHECK_DO_INBACKGROUND :  ~Lorg/apache/http/impl/client/DefaultHttpClient->execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse
+EVICHECK_SERVICE_METHOD :  ~Ljava/lang/Runtime->exec([Ljava/lang/String; [Ljava/lang/String; Ljava/io/File;)Ljava/lang/Process
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/Browser->getAllBookmarks(Landroid/content/ContentResolver;)Landroid/database/Cursor
+EVICHECK_ACTIVITY_METHOD :  ~Landroid/provider/ContactsContract$RawContacts->getContactLookupUri(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_RESTART_METHOD :  ~Ljava/net/URLConnection->getInputStream()Ljava/io/InputStream
+EVICHECK_ONCLICK_HANDLER :  ~Ljava/net/URLConnection->connect()V
+EVICHECK_PAUSE_METHOD :  ~Landroid/telephony/TelephonyManager->getSubscriberId()Ljava/lang/String
+EVICHECK_DO_INBACKGROUND :  ~Landroid/provider/ContactsContract$RawContacts->getContactLookupUri(Landroid/content/ContentResolver; Landroid/net/Uri;)Landroid/net/Uri
+EVICHECK_RECEIVER_METHOD :  ~Landroid/location/LocationManager->addGpsStatusListener(Landroid/location/GpsStatus$Listener;)Z
+EVICHECK_DESTROY_METHOD :  ~Landroid/media/AsyncPlayer->stop()V
+EVICHECK_RESUME_METHOD :  ~Landroid/net/wifi/WifiManager$WifiLock->acquire()V

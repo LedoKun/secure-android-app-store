@@ -1,0 +1,90 @@
+FROM alpine:3.6
+
+MAINTAINER Rom Luengwattanapong <s1567783@ed.ac.uk>
+
+USER root
+
+# Installs bash and python for run script
+RUN \
+apk --no-cache upgrade && \
+apk --no-cache add bash python3 coreutils
+
+# Installs OpenJDK-8
+RUN \
+apk --no-cache add openjdk8
+
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+
+# Installs Dependencies
+RUN \
+apk --no-cache add --virtual .build-dependencies openssl wget \
+ca-certificates unzip tar curl
+
+# Downloads and installs EviCheck
+ENV EVICHECKPATH /opt/EviCheck
+ENV EVICHECK_URL http://groups.inf.ed.ac.uk/security/appguarden/tools/EviCheck/EviCheck.tar.gz
+ENV PATH ${EVICHECKPATH}:$PATH
+
+RUN \
+mkdir -p ${EVICHECKPATH} && \
+curl ${EVICHECK_URL} --output ${EVICHECKPATH}/evicheck-src.tar.gz && \
+cd ${EVICHECKPATH} && \
+tar --strip-components=1 -xvzf evicheck-src.tar.gz && \
+rm evicheck-src.tar.gz
+
+# Downloads Androguard and required software
+ENV ANDROGUARDPATH ${EVICHECKPATH}/androguard
+ENV ANDROGUARD_URL https://codeload.github.com/androguard/androguard/tar.gz/v2.0
+ENV PATH ${ANDROGUARDPATH}:$PATH
+
+RUN \
+apk --no-cache add --virtual .sdk alpine-sdk git python-dev && \
+mkdir -p ${ANDROGUARDPATH} && \
+apk --no-cache add python py2-pip py-cryptography py-asn1 \
+py-mock py-magic && \
+pip install --upgrade pip && \
+pip install networkx ipython pydot pyperclip future && \
+
+curl ${ANDROGUARD_URL} --output ${ANDROGUARDPATH}/androguard-src.tar.gz && \
+cd ${ANDROGUARDPATH} && \
+tar --strip-components=1 -xvzf androguard-src.tar.gz && \
+rm androguard-src.tar.gz && \
+
+# Install androguard
+python2 setup.py install
+
+# Downloads sat4j and required software
+ENV SAT4J_PATH ${EVICHECKPATH}/solver
+ENV SAT4J_PB_FILENAME sat4j-pb-v20130525.zip
+ENV SAT4J_PB_URL http://download.forge.ow2.org/sat4j/${SAT4J_PB_FILENAME}
+ENV PATH ${SAT4J_PATH}:$PATH
+
+RUN \
+wget ${SAT4J_PB_URL} -O ${SAT4J_PATH}/${SAT4J_PB_FILENAME} && \
+cd ${SAT4J_PATH} && \
+unzip ${SAT4J_PB_FILENAME} && \
+rm ${SAT4J_PB_FILENAME}
+
+# Cleans up
+RUN \
+apk del .build-dependencies .sdk && \
+rm -rf /tmp/* /var/tmp/*
+
+# Setups run environment
+ENV _JAVA_OPTIONS -Djava.io.tmpdir=/var/tmp
+
+RUN \
+mkdir -p /tmp/policy
+
+COPY policy /tmp/policy
+
+# Create application folder
+RUN \
+mkdir -p /app
+
+VOLUME ["/app"]
+WORKDIR /opt/EviCheck
+
+ENTRYPOINT ["/usr/bin/python", "/opt/EviCheck/EviCheck.py"]
+
+# RUN: docker run -v /home/rom/Documents/secure_app_store/images/tools/Qark/:/app:ro -it --rm EV -g -p /tmp/policy/name.pol

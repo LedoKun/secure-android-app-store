@@ -1,0 +1,110 @@
+version: '2'
+services:
+
+  ### Volume Container
+  applications:
+    image: tianon/true
+    volumes:
+      - ${APPLICATION}:/app
+      - ${STORAGE_PATH}/mysql:/var/lib/mysql
+      - ${STORAGE_PATH}/queue:/data
+    container_name: secureappstore_applications_storage
+
+  ### Webserver
+  ### Provides nginx, php7, php-fpm, composer, docker
+  webserver:
+    build:
+      context: ./images/webserver
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "${NGINX_HOST_HTTP_PORT}:80"
+      - "${NGINX_HOST_HTTPS_PORT}:443"
+    tty: true
+    depends_on:
+      - db
+      - queue
+    links:
+      - db
+      - queue
+
+  ### Database
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes_from:
+      - applications
+
+  ### Queue Server - beanstalkd
+  queue:
+    build:
+      context: ./images/queue
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications
+    ports:
+      - "${BEANSTALKD_PORT}:11300"
+
+  ### Beanstalkd Console
+  queue_console:
+    image: ohmcoe/beanstalk_console
+    environment:
+      - BEANSTALKD_HOST=queue
+      - BEANSTALKD_PORT=${BEANSTALKD_PORT}
+      - APACHE_PORT=80
+    ports:
+      - "${BEANSTALKD_CONSOLE_PORT}:80"
+
+  ### Argus_SAF
+  argus:
+    build:
+      context: ./images/tools/Argus_SAF
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications:ro
+    image: secureappstore_argus
+
+  ### EviCheck
+  evicheck:
+    build:
+      context: ./images/tools/EviCheck
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications:ro
+    image: secureappstore_evicheck
+
+  ### Flowdroid
+  flowdroid:
+    build:
+      context: ./images/tools/Flowdroid
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications:ro
+    image: secureappstore_flowdroid
+
+  ### Mallodroid
+  mallodroid:
+    build:
+      context: ./images/tools/Mallodroid
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications:ro
+    image: secureappstore_mallodroid
+
+  ### QARK
+  qark:
+    build:
+      context: ./images/tools/Qark
+      dockerfile: "Dockerfile"
+    volumes_from:
+      - applications:ro
+    image: secureappstore_qark
