@@ -62,7 +62,7 @@ class Tool {
     $cpu_share = env('ANALYSIS_TOOLS_CPU_SHARES', '950');
 
     $filename_without_ext = basename($filename, '.apk');
-    $container_name = $filename_without_ext . '_temporary_container';
+    $container_name = $filename_without_ext . '_temporary_container_' . $this->testName;
     $full_file_path = $path_to_file.$filename;
 
     $this->cmd = "docker run -i --rm --volumes-from $application_volume:ro " .

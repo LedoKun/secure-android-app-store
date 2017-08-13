@@ -47,6 +47,7 @@ trait CMDHelper {
       $cmds[$cmd->getTestName()] = $cmd;
 
       // Run FlowDroid
+      $flowdroid_extra_arg = [];
       $flowdroid_extra_arg[] = 'APLENGTH ' . $rule->taint_aplength;
 
       if($rule->taint_nocallbacks) {
@@ -66,7 +67,7 @@ trait CMDHelper {
       }
 
       $cmd = new Tool("flowdroid_taint");
-      $cmd->makeCmd(env('ARGUS_IMAGE_NAME', 'secureappstore_argus'), $path_to_apk, $this->data['filename'], $flowdroid_extra_arg);
+      $cmd->makeCmd(env('FLOWDROID_IMAGE_NAME', 'secureappstore_flowdroid'), $path_to_apk, $this->data['filename'], $flowdroid_extra_arg);
       $cmds[$cmd->getTestName()] = $cmd;
     }
 
