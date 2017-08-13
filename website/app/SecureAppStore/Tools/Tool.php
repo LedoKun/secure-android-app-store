@@ -19,7 +19,7 @@ use Carbon\Carbon;
 
 use Log;
 
-abstract class Tool {
+class Tool {
 
   // Name of the test
   protected $testName;
@@ -38,13 +38,6 @@ abstract class Tool {
   protected $parsedResultDBEntry;
 
   /**
-  * Parse analysis result from each tool.
-  *
-  * @return void
-  */
-  abstract public function parseResult();
-
-  /**
   * Construct a new Tool object
   *
   * @return Tool object
@@ -53,6 +46,35 @@ abstract class Tool {
     $this->testName = $testName;
     $this->parsedResult = null;
     $this->parsedResultDBEntry = null;
+  }
+
+  /**
+  * Create new commands to run the containerized tools
+  *
+  * @param image_name Tool's image
+  * @param path_to_apk Path to APK
+  * @param filename APK filename
+  * @param extra_option Array of extra options
+  * @return none
+  */
+  public function makeCmd($image_name, $path_to_file, $filename, $extra_option = null) {
+    $application_volume = env('APPLICATION_VOLUME_CONTAINER_NAME', 'secureappstore_applications_1');
+    $cpu_share = env('ANALYSIS_TOOLS_CPU_SHARES', '950');
+
+    $filename_without_ext = basename($filename, '.apk');
+    $container_name = $filename_without_ext . '_temporary_container';
+    $full_file_path = $path_to_file.$filename;
+
+    $this->cmd = "docker run -i --rm --volumes-from $application_volume:ro " .
+    "--cpu-shares=$cpu_share --name $container_name $image_name " .
+    "--filepath " . $full_file_path . " ";
+
+    $this->cmd_on_timeout = "docker stop $container_name";
+
+    if($extra_option !== null) {
+      $this->cmd .= "--option \"". addslashes(json_encode($extra_option)) ."\"";
+    }
+
   }
 
   /**
@@ -73,6 +95,11 @@ abstract class Tool {
     }
 
     // Start an asynchronus process
+    $timeout = Carbon::now()->diffInSeconds($timeLimit, false);
+    $this->cmd = $this->cmd . " --timeout $timeout";
+
+    Log::debug('[Tool] Running command: ' . $this->cmd);
+
     $process = new Process($this->cmd);
     $process->start();
 
@@ -109,7 +136,20 @@ abstract class Tool {
     }
 
     // Save the stdout
-    $this->stdout = $process->getOutput();
+    $stdout = json_decode(rtrim($process->getOutput(), "\0"), true);
+
+    // If the command failed
+    if((json_last_error() != JSON_ERROR_NONE) || !isset($stdout['db']) || !isset($stdout['raw'])) {
+      Log::error('[Tool] Malformed return - ' . $this->testName . '.');
+      Log::error($process->getOutput());
+      Log::error($stdout);
+      throw new Exception('[Tool] Malformed return!');
+    }
+
+    $this->stdout = $stdout;
+    $this->parsedResultDBEntry = $stdout['db'];
+    unset($stdout['db']);
+    $this->parsedResult = $stdout;
   }
 
   /**
@@ -127,7 +167,7 @@ abstract class Tool {
   * @return array parsed results
   */
   public function getParsedResult() {
-    return $this->parseResult;
+    return $this->parsedResult;
   }
 
   /**
@@ -138,5 +178,4 @@ abstract class Tool {
   public function getParsedResultDBEntry() {
     return $this->parsedResultDBEntry;
   }
-
 }

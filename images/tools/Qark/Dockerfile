@@ -1,24 +1,38 @@
-FROM alpine:3.6
+FROM centos:7
 
 MAINTAINER Rom Luengwattanapong <s1567783@ed.ac.uk>
 
 USER root
 
-# Installs bash and python for run script
-RUN \
-apk --no-cache upgrade && \
-apk --no-cache add bash coreutils
+# Installs dependencies
+RUN yum update \
+    && yum install -y \
+    epel-release \
+    && rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-# Installs Dependencies
-RUN \
-apk --no-cache add --virtual .build-dependencies openssl wget \
-ca-certificates unzip tar curl git
-
-# Installs OpenJDK-7
-RUN apk --no-cache add openjdk7-jre
-RUN apk --no-cache add openjdk7
-
-ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk
+RUN yum install -y \
+    ca-certificates \
+    deltarpm \
+    git \
+    glibc-devel.i686 \
+    glibc.i686 \
+    java-1.7.0-openjdk-devel \
+    libX11-devel.i686 \
+    libXrender.i686 \
+    libstdc++.i686 \
+    ncurses-devel.i686 \
+    openssl \
+    php70w \
+    php70w-posix \
+    php70w-json \
+    python-pip \
+    python27 \
+    python27-python-devel \
+    unzip \
+    wget \
+    yum-utils \
+    zlib-devel.i686 \
+    && yum -y groupinstall 'Development Tools'
 
 # Installs Android SDKs
 # Modified from https://hub.docker.com/r/bwits/android-sdk-alpine/
@@ -29,57 +43,47 @@ ENV ANDROID_BUILD_TOOLS_VERSION 26.0.0
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
-RUN \
-apk --no-cache add libc6-compat ncurses-libs libstdc++ expect && \
-mkdir -p /opt && \
-cd /opt && \
-wget ${ANDROID_SDK_URL} && \
-unzip ${ANDROID_SDK_FILENAME} -d "${ANDROID_HOME}" && \
-rm ${ANDROID_SDK_FILENAME} && \
-echo y | android update sdk --no-ui --all --filter tools,platform-tools,${ANDROID_API_LEVELS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
-
-chown -R 1000:1000 $ANDROID_HOME
+RUN mkdir -p /opt \
+    && cd /opt \
+    && wget ${ANDROID_SDK_URL} \
+    && unzip ${ANDROID_SDK_FILENAME} -d "${ANDROID_HOME}" \
+    && rm ${ANDROID_SDK_FILENAME} \
+    && echo y | android update sdk --no-ui --all --filter tools,platform-tools,${ANDROID_API_LEVELS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} \
+    && chown -R 1000:1000 $ANDROID_HOME
 
 # Installs QARK
 ENV GIT_COMMIT 9c8ccb5c70c5c699328116f558370e0d09a0d0cd
 ENV QARK_ROOT /opt/qark
 ENV PATH ${QARK_ROOT}/qark:$PATH
-RUN \
-export LANG=C.UTF-8 && \
-apk add --no-cache python py2-pip util-linux && \
-git clone https://github.com/linkedin/qark.git ${QARK_ROOT} && \
-cd ${QARK_ROOT} && \
-git checkout ${GIT_COMMIT} && \
-pip install -r requirements.txt && \
-pip install .
+RUN export LANG=C.UTF-8 \
+    && git clone https://github.com/linkedin/qark.git ${QARK_ROOT} \
+    && cd ${QARK_ROOT} \
+    && git checkout ${GIT_COMMIT} \
+    && pip install --upgrade pip \
+    && pip install -r requirements.txt \
+    && pip install .
 
 # Allow QARK to download its dependencies
-RUN \
-cp /opt/qark/qark/sampleApps/goatdroid/goatdroid.apk /tmp && \
-cd /opt/qark/qark && \
-script --return -c "/usr/bin/python2 qarkMain.py \
--b /opt/android-sdk-linux/ \
---source 1 --pathtoapk /tmp/goatdroid.apk \
---exploit 0 --install 0" /dev/null > /dev/null 2>&1  && \
-rm -rf /tmp/goatdroid* /tmp/hsperfdata_root /tmp/*.tmp && \
-rm -rf /opt/qark/qark/report/report.html
+RUN cp /opt/qark/qark/sampleApps/goatdroid/goatdroid.apk /tmp \
+    && cd /opt/qark/qark \
+    && script --return -c "/usr/bin/python2 qarkMain.py \
+    -b /opt/android-sdk-linux/ \
+    --source 1 --pathtoapk /tmp/goatdroid.apk \
+    --exploit 0 --install 0" /dev/null > /dev/null 2>&1 \
+    && rm -rf /tmp/goatdroid* /tmp/hsperfdata_root /tmp/*.tmp \
+    && rm -rf /opt/qark/qark/report/report.html
 
 # Cleanup
-RUN \
-rm -rf /var/tmp/*
+RUN rm -rf /var/tmp/*
 
 # Create application folder
-RUN \
-mkdir -p /app
+RUN mkdir -p /app
 
 VOLUME ["/app"]
 
-COPY run.sh /tmp/
-RUN \
-chmod +x /tmp/run.sh
+COPY run.php /tmp/
+RUN chmod +x /tmp/run.php
 
 WORKDIR /tmp
 
-ENTRYPOINT ["/tmp/run.sh"]
-
-# RUN: docker run -v /home/rom/Documents/secure_app_store/images/tools/Qark/:/app:ro -it --rm qt --source 1 --pathtoapk /app/kodi-17.3-Krypton-armeabi-v7a.apk --exploit 0 --install 0 -b /opt/android-sdk-linux/
+ENTRYPOINT ["/usr/bin/php", "/tmp/run.php"]

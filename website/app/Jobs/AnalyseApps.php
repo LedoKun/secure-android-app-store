@@ -124,7 +124,6 @@ class AnalyseApps implements ShouldQueue
       .$cmd->getTestName());
 
       $cmd->run($time_limit);
-      $cmd->parseResult();
 
       $parseResult[$cmd->getTestName()] = $cmd->getParsedResult();
       UploadApp::setBeingAnalyze($app->id, '0');

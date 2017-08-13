@@ -7,50 +7,46 @@ MAINTAINER Rom Luengwattanapong <s1567783@ed.ac.uk>
 
 # Install packages
 RUN apk --update add --no-cache \
-tzdata \
-nginx \
-curl \
-supervisor \
-php7 \
-php7-dom \
-php7-fpm \
-php7-mbstring \
-php7-mcrypt \
-php7-tokenizer \
-php7-opcache \
-php7-pdo \
-php7-pdo_mysql \
-php7-pdo_pgsql \
-php7-pdo_sqlite \
-php7-xml \
-php7-simplexml \
-php7-phar \
-php7-openssl \
-php7-json \
-php7-curl \
-php7-ctype \
-php7-session \
-php7-gd \
-php7-zlib \
-php7-fileinfo \
-php7-zip \
-php7-mbstring \
-docker \
-git \
-bash \
-coreutils \
-shadow \
-python3 && \
-rm -rf /var/cache/apk/*
-
-# Configuring PHP Plugins
-# RUN echo "extension=php_xmlrpc.dll" >> /etc/php7/php.ini
+    bash \
+    coreutils \
+    curl \
+    docker \
+    git \
+    nginx \
+    php7 \
+    php7-ctype \
+    php7-curl \
+    php7-dom \
+    php7-fileinfo \
+    php7-fpm \
+    php7-gd \
+    php7-json \
+    php7-mbstring \
+    php7-mbstring \
+    php7-mcrypt \
+    php7-opcache \
+    php7-openssl \
+    php7-pdo \
+    php7-pdo_mysql \
+    php7-pdo_pgsql \
+    php7-pdo_sqlite \
+    php7-phar \
+    php7-session \
+    php7-simplexml \
+    php7-tokenizer \
+    php7-xml \
+    php7-zip \
+    php7-zlib \
+    python3 \
+    shadow \
+    supervisor \
+    tzdata \
+    && rm -rf /var/cache/apk/*
 
 # Configuring timezones
-RUN \
-cp /usr/share/zoneinfo/Europe/London /etc/localtime && \
-echo "Europe/London" >  /etc/timezone && \
-apk del tzdata && rm -rf /var/cache/apk/*
+RUN cp /usr/share/zoneinfo/Europe/London /etc/localtime \
+    && echo "Europe/London" >  /etc/timezone \
+    && apk del tzdata && rm -rf /var/cache/apk/*
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
@@ -87,5 +83,3 @@ EXPOSE 80 443
 
 # Start Supervisord
 CMD ["/start.sh"]
-
-# docker run -v /mnt/hgfs/Project/website:/app -v /var/run/docker.sock:/var/run/docker.sock -p 8080:80 -p 4433:443 -itd webserver
