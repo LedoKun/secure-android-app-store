@@ -10,7 +10,9 @@ Usage
 $ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/evicheck --filepath /path/to/apk/sample.apk --timeout 3600
 ```
 
-2. To use generate a policy for application's certificate, please refer to EviCheck's documentation [![tdocumentation](http://groups.inf.ed.ac.uk/security/appguarden/tools/EviCheck/doc.html). To get a shell access to a container:
+2. To use generate a policy for application's certificate, please refer to EviCheck's documentation (http://groups.inf.ed.ac.uk/security/appguarden/tools/EviCheck/doc.html).
+
+To get a shell access to a container:
 ```
 $ docker run -it --rm -v /path/to/apk:path/to/apk --entrypoint=bash ledokun/evicheck
 ```
