@@ -47,7 +47,7 @@ $pid = proc_get_status($process)["pid"];
 while(($timer >= time()) && !feof($pipes[1])) {
   // Wait for the process or the timer
   sleep ($refresh_every_sec);
-  $output .= fread($pipes[1], 8192);
+  $output .= preg_replace('/[^\PC\s]/u', '', fread($pipes[1], 8192));
 }
 
 // Time limit is reached
