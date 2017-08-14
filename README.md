@@ -45,7 +45,13 @@ $ cp .env.example.appstore .env
 $ nano .env
 ```
 
-5. (Optional) Change admin credentails. Edit the following lines:
+5. (Optional) Change admin's credentails.
+
+```
+$ nano database/migrations/2014_10_12_000000_create_users_table.php
+```
+
+Edit the following lines:
 
 ```
 DB::table('users')->insert(
@@ -57,11 +63,6 @@ DB::table('users')->insert(
     )
   );
 }
-```
-
-
-```
-$ nano database/migrations/2014_10_12_000000_create_users_table.php
 ```
 
 6. Install Laravel PHP framework and populate the database.
