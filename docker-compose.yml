@@ -13,9 +13,7 @@ services:
   ### Webserver
   ### Provides nginx, php7, php-fpm, composer, docker
   webserver:
-    build:
-      context: ./images/webserver
-      dockerfile: "Dockerfile"
+    image: ledokun/secure-android-app-store
     volumes_from:
       - applications
     volumes:
@@ -46,9 +44,7 @@ services:
 
   ### Queue Server - beanstalkd
   queue:
-    build:
-      context: ./images/queue
-      dockerfile: "Dockerfile"
+    image: ledokun/beanstalkd
     volumes_from:
       - applications
     ports:
@@ -66,45 +62,30 @@ services:
 
   ### Argus_SAF
   argus:
-    build:
-      context: ./images/tools/Argus_SAF
-      dockerfile: "Dockerfile"
+    image: ledokun/argus-saf
     volumes_from:
       - applications:ro
-    image: secureappstore_argus
 
   ### EviCheck
   evicheck:
-    build:
-      context: ./images/tools/EviCheck
-      dockerfile: "Dockerfile"
+    image: ledokun/evicheck
     volumes_from:
       - applications:ro
-    image: secureappstore_evicheck
 
   ### Flowdroid
   flowdroid:
-    build:
-      context: ./images/tools/Flowdroid
-      dockerfile: "Dockerfile"
+    image: ledokun/flowdroid
     volumes_from:
       - applications:ro
-    image: secureappstore_flowdroid
 
   ### Mallodroid
   mallodroid:
-    build:
-      context: ./images/tools/Mallodroid
-      dockerfile: "Dockerfile"
+    image: ledokun/mallodroid
     volumes_from:
       - applications:ro
-    image: secureappstore_mallodroid
 
   ### QARK
   qark:
-    build:
-      context: ./images/tools/Qark
-      dockerfile: "Dockerfile"
+    image: ledokun/qark
     volumes_from:
       - applications:ro
-    image: secureappstore_qark
