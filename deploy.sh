@@ -1,22 +1,25 @@
 #!/bin/bash
 
-docker build -t secureappstore_argus ./images/tools/Argus_SAF/
-docker build -t secureappstore_evicheck ./images/tools/EviCheck/
-docker build -t secureappstore_flowdroid ./images/tools/Flowdroid/
-docker build -t secureappstore_mallodroid ./images/tools/Mallodroid/
-docker build -t secureappstore_qark ./images/tools/Qark/
-docker build -t webserver ./images/webserver
-docker build -t queue ./images/queue/
+docker pull ledokun/argus-saf
+docker pull ledokun/evicheck
+docker pull ledokun/flowdroid
+docker pull ledokun/mallodroid
+docker pull ledokun/qark
+docker pull ledokun/secure-android-app-store
+docker pull ledokun/beanstalkd
 docker pull mariadb
 docker pull tianon/true
+
+docker tag ledokun/secure-android-app-store webserver
+docker tag ledokun/beanstalkd queue
 
 docker network create -d bridge --attachable secureappstore
 
 docker run -d \
   --name applications \
-  -v /home/rom/secure_app_store/website:/app \
-  -v /home/rom/secure_app_store/storage/mysql:/var/lib/mysql  \
-  -v /home/rom/secure_app_store/storage/queue:/data \
+  -v $PWD/website:/app \
+  -v $PWD/storage/mysql:/var/lib/mysql  \
+  -v $PWD/storage/queue:/data \
   --network=secureappstore \
   tianon/true
 
