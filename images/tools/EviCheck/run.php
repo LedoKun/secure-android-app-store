@@ -104,10 +104,11 @@ $hay_stack = explode(PHP_EOL, $output);
 $number_of_rules = preg_grep($rule, $hay_stack);
 
 if(is_array($number_of_rules) && count($number_of_rules) > 0) {
-  preg_match($rule_extract_number, $number_of_rules, $tmp);
+  preg_match($rule_extract_number, end($number_of_rules), $tmp);
   $db_record['no_rules_broken'] = end($tmp);
   $parsed_output[] = $number_of_rules;
-  $parsed_output[] = 'Please refer to EviCheck output for more information.' . PHP_EOL;
+  $parsed_output[] = 'Please refer to EviCheck output for more information.' .
+  PHP_EOL;
 
   $details = preg_grep($rule_violated, $hay_stack);
   $parsed_output = array_merge($parsed_output, $details);
