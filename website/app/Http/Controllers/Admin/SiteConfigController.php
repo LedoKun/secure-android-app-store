@@ -93,7 +93,7 @@ class SiteConfigController extends Controller
       AnalysisResult::where('isVisible', false)
       ->update(['isVisible' => true]);
 
-      if($request->max_cvss != -1) {
+      if(bccomp($request->max_cvss, '10.0', 1)  != 0) {
         AnalysisResult::where('mitm_cvss', '>', $request->max_cvss)
         ->orWhere('cert_pinning_mitm_cvss', '>', $request->max_cvss)
         ->orWhere('privilege_escalation_cvss', '>', $request->max_cvss)
@@ -135,8 +135,8 @@ class SiteConfigController extends Controller
         ->update(['isVisible' => false]);
       }
 
-      if($request->cert_pinning_mitm == 0) {
-        AnalysisResult::where('allow_cert_pinning_mitm', 1)
+      if($request->allow_cert_pinning_mitm == 0) {
+        AnalysisResult::where('cert_pinning_mitm', 1)
         ->update(['isVisible' => false]);
       }
 

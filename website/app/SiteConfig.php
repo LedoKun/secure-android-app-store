@@ -80,10 +80,11 @@ class SiteConfig extends Model
       return false;
     }
 
-    if( (intval($criteria->max_cvss) != -1) &&
-        ($criteria->max_cvss < $result->mitm_cvss) &&
-        ($criteria->max_cvss < $result->cert_pinning_mitm_cvss) &&
-        ($criteria->max_cvss < $result->privilege_escalation_cvss) ) {
+    if( (bccomp($criteria->max_cvss, '10.0', 1)  != 0) &&
+    (bccomp($criteria->max_cvss, $result->mitm_cvss, 1)  != 1) &&
+    (bccomp($criteria->max_cvss, $result->cert_pinning_mitm_cvss, 1)  != 1) &&
+    (bccomp($criteria->max_cvss, $result->privilege_escalation_cvss, 1)  != 1) ) {
+
       return false;
     }
 
