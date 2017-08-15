@@ -78,3 +78,5 @@ $ docker-compose restart
 ```
 
 8. Navigate to http://localhost:8080.
+
+9. (Optional) The default path for EviCheck's policy is at 'storage/policy', place your own policies there.

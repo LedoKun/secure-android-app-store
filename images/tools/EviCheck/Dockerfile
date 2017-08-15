@@ -84,9 +84,6 @@ RUN apk del .build-dependencies \
 # Setups run environment
 ENV _JAVA_OPTIONS -Djava.io.tmpdir=/var/tmp
 
-# Copy external policy
-COPY policy /tmp/policy
-
 # Create application folder
 RUN mkdir -p /app
 

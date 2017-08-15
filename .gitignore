@@ -1,1 +1,4 @@
 .env
+/storage/policy/*.pol
+/storage/queue/*
+/storage/mysql/*
