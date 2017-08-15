@@ -129,8 +129,13 @@ $hay_stack = explode(PHP_EOL, $output);
 $parsed_output = array_merge($parsed_output, preg_grep($data_leakage, $hay_stack));
 $parsed_output = array_merge($parsed_output, preg_grep($data_theft, $hay_stack));
 
-$db_record['vulnerable_leak'] = preg_match($data_leakage, $output);
-$db_record['malicious_leak'] = preg_match($data_theft, $output);
+if (preg_match($data_leakage, $output)) {
+  $db_record['vulnerable_leak'] = 1;
+}
+
+if (preg_match($data_theft, $output)) {
+  $db_record['malicious_leak'] = 1;
+}
 
 if(count($parsed_output) == 0) {
   $parsed_output[] = "No issues found.";
