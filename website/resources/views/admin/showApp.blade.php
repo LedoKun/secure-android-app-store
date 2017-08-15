@@ -180,8 +180,6 @@ App #{{ $app->id }}
 @foreach ($file_results as $testname => $output)
 <div class="row raw-div">
 
-
-
   <h3 class="page-header">Test - {{ $testname }}</h3>
 
   <?php
