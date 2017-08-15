@@ -80,3 +80,9 @@ $ docker-compose restart
 8. Navigate to http://localhost:8080.
 
 9. (Optional) The default path for EviCheck's policy is at 'storage/policy', place your own policies there.
+
+10. (Optional) To move the Secure Android App Store to production stage, edit 'website/.env' as follows:
+```
+APP_ENV=production
+APP_DEBUG=false
+```

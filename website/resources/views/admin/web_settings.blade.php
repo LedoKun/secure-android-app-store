@@ -29,6 +29,11 @@
   </div>
 
   <div class="form-group">
+    {{ Form::label('max_cvss', 'Maximum inclusive CVSS score allowed, if applicable. (Enter 10 to disable this rule)') }}
+    {{ Form::text('max_cvss', null, array('class' => 'form-control', 'required' => 'required')) }}
+  </div>
+
+  <div class="form-group">
     {{ Form::label('allow_hide_icon', 'Allow app that hides its icon') }}
     <div class="radio">
       <label>{{ Form::radio('allow_hide_icon', '1', false, array('id' => 'allow_hide_icon_enabled')) }} Enable</label>
