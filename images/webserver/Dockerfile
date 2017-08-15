@@ -14,6 +14,7 @@ RUN apk --update add --no-cache \
     git \
     nginx \
     php7 \
+    php7-bcmath \
     php7-ctype \
     php7-curl \
     php7-dom \
