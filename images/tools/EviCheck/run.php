@@ -106,7 +106,7 @@ $number_of_rules = preg_grep($rule, $hay_stack);
 if(is_array($number_of_rules) && count($number_of_rules) > 0) {
   preg_match($rule_extract_number, end($number_of_rules), $tmp);
   $db_record['no_rules_broken'] = end($tmp);
-  $parsed_output[] = $number_of_rules;
+  $parsed_output = array_merge($number_of_rules, $parsed_output);
   $parsed_output[] = 'Please refer to EviCheck output for more information.' .
   PHP_EOL;
 
