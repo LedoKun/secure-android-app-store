@@ -44,7 +44,7 @@ class AnalysisToolController extends Controller
   {
     $existingRules = AnalysisToolSetting::listRules()
     ->paginate(4, ['id', 'rule_name', 'api_misuse', 'custom_policy',
-    'custom_policy', 'taint_analysis', 'updated_at',
+    'custom_policy', 'taint_analysis', 'updated_at', 'vulnerability_scan',
     'created_at'], 'existingRules');
 
     $currentDefault = AnalysisToolDefaultRule::getDefault()->latest()->first();
