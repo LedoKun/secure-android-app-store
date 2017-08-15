@@ -29,7 +29,7 @@
   </div>
 
   <div class="form-group">
-    {{ Form::label('max_cvss', 'Maximum inclusive CVSS score allowed, if applicable. (Enter 10 to disable this rule)') }}
+    {{ Form::label('max_cvss', 'Maximum inclusive CVSS score allowed, if applicable. (Enter 10.0 to disable this rule)') }}
     {{ Form::text('max_cvss', null, array('class' => 'form-control', 'required' => 'required')) }}
   </div>
 

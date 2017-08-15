@@ -35,7 +35,7 @@ class CreateSiteConfigsTable extends Migration
         DB::table('site_configs')->insert(
           array(
             'site_name' => 'Secure Android App Store',
-            'max_cvss' => '-1',
+            'max_cvss' => '10.0',
             'allow_mitm' => '3.9',
             'allow_hide_icon' => '1',
             'allow_weak_cryptographic_api' => '0',
