@@ -70,10 +70,14 @@ $ cp .env.example .env
 $ nano .env
 ```
 
-
 3. Download project's pre-built images from Docker Hub.
 ```
 $ docker-compose pull
+```
+(OR) If you want to build the images locally, use the following commands:
+```
+$ mv docker-compose-build-image-locally.yml docker-compose.yml
+$ docker-compose build
 ```
 
 4. Configure App Store website.
