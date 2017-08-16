@@ -7,7 +7,7 @@ Usage
 
 To perform static analysis:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/mallodroid --filepath /path/to/apk/sample.apk --timeout 3600 --option "[\"APLENGTH 5\"]"
+$ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/mallodroid --filepath /path/to/apk/sample.apk --timeout 3600
 ```
 
 For more information on MalloDroid, please go to https://github.com/sfahl/mallodroid.
