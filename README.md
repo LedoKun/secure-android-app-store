@@ -1,10 +1,10 @@
 Secure Android App Store
-======
+========================
 
 Secure Android App Store is an Android app store infrastructure that relies on fully automated app analysis using off-device application analysis tools. The purpose of this project is to integrate existing analysis tools that could be a part of an easy-to-deploy app store and to be a starting point for those who wish to build an Android app store that relies on automated app analysis.
 
 Containerized Tools
-------
+-------------------
 
 We selected several existing Android app analysis tools and incorporated them into our project as follows:
 
@@ -14,10 +14,47 @@ We selected several existing Android app analysis tools and incorporated them in
 * QARK
 * MalloDroid
 
-Installation Guide
-------
+Folder Structure
+----------------
 
-Requirement: Docker, Docker-compose
+./secure_app_store
+├── deploy.sh                   - An example of deployment script, used in the evaluation
+├── docker-compose-build-image-locally.yml  - Docker compose file, build the image locally
+├── docker-compose.yml          - Docker compose file, uses pre-built images from Docker Hub
+├── images                      - Store the infrastructure Dockerfiles
+│   ├── queue                       - Beanstalk Dockerfile
+│   ├── tools                       - Containerized Tools Dockerfile
+│   └── webserver                   - Web service stacks Dockerfile
+├── LICENSE
+├── README.md                   - This file!
+├── storage                     - Storage area for MariaDB, Beanstalk, and EviCheck's policy
+│   └── policy                      - Store EviCheck's policy
+└── website                     - Laravel's root folder
+    ├── app                         - Stores Controllers, Models, and Background worker
+    ├── artisan
+    ├── bootstrap
+    ├── composer.json
+    ├── composer.lock
+    ├── config
+    ├── database
+    ├── node_modules
+    ├── npm-debug.log
+    ├── package.json
+    ├── phpunit.xml
+    ├── public
+    ├── readme.md
+    ├── resources                   - Stores website's views
+    ├── routes                      - Stores website's routes
+    ├── server.php
+    ├── storage                     - Stores uploaded APK files, results and logs
+    ├── tests                       - Stores Unit and Feature tests
+    ├── vendor
+    └── webpack.mix.js
+
+Installation Guide
+------------------
+
+Requirement: Linux OS, Docker, Docker-compose
 
 1. Clone the project repository to your computer.
 ```
@@ -77,7 +114,7 @@ $ php artisan migrate
 $ docker-compose restart
 ```
 
-8. Navigate to http://localhost:8080.
+8. Navigate to http://localhost:8080 (The default username: admin, password: secretpassword).
 
 9. (Optional) The default path for EviCheck's policy is at 'storage/policy', place your own policies there.
 
