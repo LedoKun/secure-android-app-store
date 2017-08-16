@@ -17,6 +17,7 @@ We selected several existing Android app analysis tools and incorporated them in
 Folder Structure
 ----------------
 
+```
 ./secure_app_store
 ├── deploy.sh                   - An example of deployment script, used in the evaluation
 ├── docker-compose-build-image-locally.yml  - Docker compose file, build the image locally
@@ -50,6 +51,7 @@ Folder Structure
     ├── tests                       - Stores Unit and Feature tests
     ├── vendor
     └── webpack.mix.js
+```
 
 Installation Guide
 ------------------
