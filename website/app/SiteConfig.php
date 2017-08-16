@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class SiteConfig extends Model
 {
+
+  /*
+  |--------------------------------------------------------------------------
+  | Site Config Model
+  |--------------------------------------------------------------------------
+  |
+  | This model is responsible for handling web site configurations.
+  |
+  */
   protected $fillable = [
     'site_name', 'allow_mitm', 'allow_hide_icon', 'allow_weak_cryptographic_api',
     'allow_vulnerable_leak', 'allow_malicious_leak', 'max_no_rules_broken',
@@ -14,6 +23,11 @@ class SiteConfig extends Model
     'information_count'
   ];
 
+  /**
+  * Get web site name
+  *
+  * @return string Web Site's name
+  */
   public static function getSiteName() {
 
     return static::select('site_name', 'created_at')->orderBy('created_at', 'desc')
@@ -21,6 +35,12 @@ class SiteConfig extends Model
 
   }
 
+  /**
+  * Show if the application is visible on the store or not.
+  *
+  * @param  Illuminate\Support\Collection Analysis results
+  * @return Boolean
+  */
   public static function isAppVisible($result) {
 
     $criteria = static::select('site_name', 'max_cvss',

@@ -12,6 +12,15 @@ use App\AnalysisResult;
 class HomeController extends Controller
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Home Controller
+  |--------------------------------------------------------------------------
+  |
+  | This controller is responsible for displaying the app store's storefront.
+  |
+  */
+
   /**
   * Create a new controller instance.
   *
@@ -25,7 +34,7 @@ class HomeController extends Controller
   /**
   * Display a listing of the resource.
   *
-  * @return \Illuminate\Http\Response
+  * @return \Illuminate\Http\view
   */
   public function index()
   {

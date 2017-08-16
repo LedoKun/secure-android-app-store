@@ -12,6 +12,15 @@ use App\AnalysisResult;
 class AnalyzedAppsController extends Controller
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Analyzed App Controller
+  |--------------------------------------------------------------------------
+  |
+  | This controller is responsible for listing analyzed applications.
+  |
+  */
+
   /**
   * Create a new controller instance.
   *

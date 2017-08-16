@@ -22,6 +22,15 @@ use Exception;
 class AnalysisBackEndTest extends BaseTestCase
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Analysis Backend Test
+  |--------------------------------------------------------------------------
+  |
+  | This feature test is responsible for testing analysis process
+  |
+  */
+
   use WithoutMiddleware, DatabaseMigrations, CreatesApplication;
 
   public $baseUrl = 'http://localhost:8080';

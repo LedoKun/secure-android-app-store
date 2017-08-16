@@ -23,6 +23,16 @@ use App\Jobs\AnalyseApps;
 
 class AnalysisToolController extends Controller
 {
+
+  /*
+  |--------------------------------------------------------------------------
+  | Tool Configuration Controller
+  |--------------------------------------------------------------------------
+  |
+  | This controller is responsible for handling analysis tools' configurations.
+  |
+  */
+
   use ToolsConfigHelper;
 
   /**

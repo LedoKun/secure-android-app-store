@@ -158,14 +158,16 @@ App #{{ $app->id }}
         <i class="glyphicon glyphicon-ok"></i>
       </div>
       <div class="text">
-        <var>Okay!</var>
+        <var>Passed</var>
+        <label class="text-muted">The app passed the<br/>publishing criteria.</label>
       </div>
       @else
       <div class="icon">
         <i class="glyphicon glyphicon-remove"></i>
       </div>
       <div class="text">
-        <var>Bad!</var>
+        <var>Failed</var>
+        <label class="text-muted">The app failed the<br/>publishing criteria.</label>
       </div>
       @endif
 

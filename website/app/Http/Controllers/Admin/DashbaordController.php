@@ -12,6 +12,15 @@ use App\AnalysisResult;
 class DashbaordController extends Controller
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Dashbaord Controller
+  |--------------------------------------------------------------------------
+  |
+  | This controller is responsible for displaying the administrator dashboard.
+  |
+  */
+
   /**
   * Create a new controller instance.
   *

@@ -17,6 +17,16 @@ use bccomp;
 class SiteConfigController extends Controller
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Site Config Controller
+  |--------------------------------------------------------------------------
+  |
+  | This controller is responsible for handling the website's configurations,
+  | as well as, the publishing criteria.
+  |
+  */
+
   /**
   * Create a new controller instance.
   *
@@ -30,7 +40,7 @@ class SiteConfigController extends Controller
   /**
   * Display a listing of the resource.
   *
-  * @return \Illuminate\Http\Response
+  * @return \Illuminate\Http\View
   */
   public function index()
   {

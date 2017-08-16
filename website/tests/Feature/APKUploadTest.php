@@ -20,6 +20,15 @@ use App\Jobs\AnalyseApps;
 class APKUploadTest extends BaseTestCase
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | APK Upload Test
+  |--------------------------------------------------------------------------
+  |
+  | This feature test is responsible for testing APK file upload
+  |
+  */
+
   use WithoutMiddleware, DatabaseMigrations, CreatesApplication;
 
   public $baseUrl = 'http://localhost:8080';

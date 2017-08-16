@@ -30,6 +30,15 @@ use App\SecureAppStore\APK\APK;
 class UploadAppController extends Controller
 {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Upload App Controller
+  |--------------------------------------------------------------------------
+  |
+  | This controller is responsible for handling Android application upload.
+  |
+  */
+
   /**
   * Create a new controller instance.
   *
@@ -43,7 +52,7 @@ class UploadAppController extends Controller
   /**
   * Display a listing of the resource.
   *
-  * @return \Illuminate\Http\Response
+  * @return \Illuminate\Http\View
   */
   public function index()
   {
@@ -58,7 +67,7 @@ class UploadAppController extends Controller
   /**
   * Show the form for creating a new resource.
   *
-  * @return \Illuminate\Http\Response
+  * @return \Illuminate\Http\View
   */
   public function create()
   {
@@ -221,7 +230,7 @@ class UploadAppController extends Controller
   * Display the specified resource.
   *
   * @param  \App\Admin\UploadApp  $uploadApp
-  * @return \Illuminate\Http\Response
+  * @return \Illuminate\Http\View
   */
   public function show($id)
   {
