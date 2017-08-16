@@ -7,7 +7,7 @@ Usage
 
 To scan for vulnerability:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/qark --filepath /path/to/apk/sample.apk --timeout 3600
+$ docker run -it --rm -v /path/to/apk:/path/to/apk ledokun/qark --filepath /path/to/apk/sample.apk --timeout 3600
 ```
 
 For more information on QARK, please go to https://github.com/linkedin/qark.

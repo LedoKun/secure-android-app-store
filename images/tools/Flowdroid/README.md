@@ -7,7 +7,7 @@ Usage
 
 To perform taint analysis:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/flowdroid --filepath /path/to/apk/sample.apk --timeout 3600 --option "[\"APLENGTH 5\"]"
+$ docker run -it --rm -v /path/to/apk:/path/to/apk ledokun/flowdroid --filepath /path/to/apk/sample.apk --timeout 3600 --option "[\"APLENGTH 5\"]"
 ```
 
 Note that *--option* is FlowDroid's command-line arguments in JSON array.

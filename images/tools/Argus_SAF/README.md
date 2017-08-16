@@ -7,12 +7,12 @@ Usage
 
 1. For taint analysis:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/argus-saf --filepath /path/to/apk/sample.apk --timeout 3600 --option "{\"api_or_taint\":\"t\"}"
+$ docker run -it --rm -v /path/to/apk:/path/to/apk ledokun/argus-saf --filepath /path/to/apk/sample.apk --timeout 3600 --option "{\"api_or_taint\":\"t\"}"
 ```
 
 2. For inappropriate cryptographic API misuse detection:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk ledokun/argus-saf --filepath /path/to/apk/sample.apk --timeout 3600 --option "{\"api_or_taint\":\"a\"}"
+$ docker run -it --rm -v /path/to/apk:/path/to/apk ledokun/argus-saf --filepath /path/to/apk/sample.apk --timeout 3600 --option "{\"api_or_taint\":\"a\"}"
 ```
 
 For more information on Argus-SAF, please go to http://pag.arguslab.org/argus-saf.

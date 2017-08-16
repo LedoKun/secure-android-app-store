@@ -7,14 +7,14 @@ Usage
 
 1. For policy verification:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk -v /path/to/policy:/tmp/policy ledokun/evicheck --filepath /path/to/apk/sample.apk --timeout 3600 --option "{\"policy\":\"policy_name.pol\"}"
+$ docker run -it --rm -v /path/to/apk:/path/to/apk -v /path/to/policy:/tmp/policy ledokun/evicheck --filepath /path/to/apk/sample.apk --timeout 3600 --option "{\"policy\":\"policy_name.pol\"}"
 ```
 
 2. To use generate a policy for application's certificate, please refer to EviCheck's documentation (http://groups.inf.ed.ac.uk/security/appguarden/tools/EviCheck/doc.html).
 
 To get a shell access to a container:
 ```
-$ docker run -it --rm -v /path/to/apk:path/to/apk --entrypoint=bash ledokun/evicheck
+$ docker run -it --rm -v /path/to/apk:/path/to/apk --entrypoint=bash ledokun/evicheck
 ```
 
 For more information on EviCheck, please go to http://groups.inf.ed.ac.uk/security/appguarden/tools/EviCheck/.
