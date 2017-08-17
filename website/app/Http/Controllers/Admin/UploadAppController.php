@@ -234,7 +234,7 @@ class UploadAppController extends Controller
 
     endforeach;
 
-    return \Redirect::route('upload.store')->with('response', $response);
+    return \Redirect::route('upload.store')->with('response' => $response);
   }
 
   /**
