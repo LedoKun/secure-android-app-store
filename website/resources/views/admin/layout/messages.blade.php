@@ -8,10 +8,10 @@
 </div>
 @endif
 
-@if (isset($info))
+@if (isset($info) && ($info != null))
 <div class="alert alert-info alert-dismissibler" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <span class="sr-only">Error:</span>
+  <span class="sr-only">Information:</span>
   @foreach ($info as $msg)
   <p>{{ $msg }}<br/></p>
   @endforeach

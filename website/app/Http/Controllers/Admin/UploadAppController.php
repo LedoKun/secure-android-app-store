@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Queue;
+use Session;
 
 # Models
 use App\UploadApp;
@@ -57,11 +58,21 @@ class UploadAppController extends Controller
   public function index()
   {
     //
+
+    if(Session::has('response')) {
+      $response = Session::get('response');
+      $info = "Successfully uploaded " . $response['success'] . " files" .
+      " (duplication " . $response['duplicate'] .
+      ", failed " . $response['fail'] . ")";
+    } else {
+      $info = null;
+    }
+
     $results = UploadApp::selectAllPendingApps()
     ->paginate(15, ['id', 'package_name', 'size', 'sha256', 'isBeingAnalyzed',
     'isFailedAnalysis', 'attempts', 'updated_at', 'created_at']);
 
-    return view('admin.pending', compact('results'));
+    return view('admin.pending', compact('results', 'info'));
   }
 
   /**
@@ -223,7 +234,7 @@ class UploadAppController extends Controller
 
     endforeach;
 
-    return \Response::json($response);
+    return \Redirect::route('upload.store')->with('response' => $response);
   }
 
   /**

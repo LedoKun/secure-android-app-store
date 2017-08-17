@@ -18,7 +18,7 @@
     <small> Supports multiple APK files upload.</small>
   </div>
   <div class="panel-body">
-    <form id="upload" enctype="multipart/form-data">
+    <form id="upload" enctype="multipart/form-data" action="/admin/upload" method="post">
       {{ csrf_field() }}
       <div class="form-group">
         <input type="file" name="file[]" id="fileupload_fild" multiple="multiple">
@@ -46,36 +46,4 @@ $('#fileupload_fild').filestyle({
 });
 </script>
 
-{{-- https://devdojo.com/episode/laravel-multiple-file-upload --}}
-
-<script>
-var form = document.getElementById('upload');
-var request = new XMLHttpRequest();
-
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  var formdata = new FormData(form);
-
-  request.open('post', '{{ URL::to('admin/upload') }}');
-  request.addEventListener("load", transferComplete);
-  request.send(formdata);
-
-  document.getElementById('message').innerHTML = "Uploading files...";
-  document.getElementById("submit").disabled = true;
-});
-
-function transferComplete(data){
-  response = JSON.parse(data.currentTarget.response);
-  form.reset();
-  if(response.success > 0 || response.duplicate > 0 || response.fail > 0){
-    document.getElementById('message').innerHTML = "Successfully uploaded " + response.success + " files"
-    + " (duplication " + response.duplicate
-    + ", failed " + response.fail + ")";
-  } else {
-    document.getElementById('message').innerHTML = "Files upload failed!";
-  }
-
-  document.getElementById("submit").disabled = false;
-}
-</script>
 @endsection
