@@ -33,5 +33,7 @@ ln -s /app/storage/app/public /app/public/storage
 chown www:root -R /app
 chmod 775 -R /app
 
+chown -Rf www:www /var/lib/nginx
+
 # Start supervisord and services
 exec supervisord -c /etc/supervisord.conf
