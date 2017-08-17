@@ -76,6 +76,12 @@ $ nano .env
 $ docker-compose pull
 ```
 
+(OR) If you want to build the images locally, use the following commands:
+```
+$ mv docker-compose-build-image-locally.yml docker-compose.yml
+$ docker-compose build
+```
+
 4. Configure App Store website.
 ```
 $ docker-compose up -d webserver
