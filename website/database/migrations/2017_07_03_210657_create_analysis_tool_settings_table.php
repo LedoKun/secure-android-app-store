@@ -39,10 +39,10 @@ class CreateAnalysisToolSettingsTable extends Migration
       array(
         'rule_name'              => 'Default',
         'comments'               => 'This is the default rule',
-        'timeout'                => '6000',
+        'timeout'                => '3600',
         'api_misuse'             => '1',
         'vulnerability_scan'     => '1',
-        'custom_policy'          => 'policy_api.pol',
+        'custom_policy'          => null,
 
         'taint_analysis'        => '1',
         'taint_aplength'        => '5',
